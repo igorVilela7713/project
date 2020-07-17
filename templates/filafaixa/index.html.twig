@@ -1,0 +1,87 @@
+{% extends 'base.html.twig' %}
+
+
+
+
+{% block main %}
+
+    <body>
+    <div class="container">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-8"><h2>Fila de Atendimento<b> Faixa Etaria</b></h2></div>
+                    <div class="col-sm-4">
+                        <a href="{{ path('faixa') }}" class="btn btn-info add-new"><i class="fa fa-plus"></i>>Adicionar Novo</a>
+                    </div>
+                </div>
+            </div>
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Codigo da Fila de Atendimento</th>
+                    <th>Idade Inicio</th>
+                    <th>Idade Fim</th>
+                    <th>Quantidade</th>
+                    <th>Utilizado</th>
+                    <th>Ordem</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    {% for post in posts %}
+                <tr>
+
+
+                    <td>
+                        {{ post.id }}
+                    </td>
+                    <td>
+                        {{ post.codigoFilaAtendimento }}
+                    </td>
+                    <td>
+                        {{ post.idadeInicio }}
+                    </td>
+                    <td>
+                        {{ post.idadeFim }}
+                    </td>
+                    <td>
+                        {{ post.qtd }}
+                    </td>
+                    <td>
+                        {{ post.utilizado }}
+                    </td>
+                    <td>
+                        {{ post.ordem }}
+                    </td>
+
+
+                    <td>
+                        <a class="edit" title="Edit" data-toggle="tooltip" href="{{ path('faixa') }}"><i class="material-icons">&#xE254;</i></a>
+                        <a class="delete" title="Delete" data-toggle="tooltip" href="{{ path('faixa') }}"><i class="material-icons">&#xE872;</i></a>
+                    </td>
+
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
