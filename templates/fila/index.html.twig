@@ -46,8 +46,8 @@
         </td>
 
         <td>
-                    <a class="edit" title="Edit" data-toggle="tooltip" href="{{ path('fila') }}"><i class="material-icons">&#xE254;</i></a>
-                    <a class="delete" title="Delete" data-toggle="tooltip" href="{{ path('filad') }}"><i class="material-icons">&#xE872;</i></a>
+                    <a class="edit" title="Edit" data-toggle="tooltip" href="{{ path('filam' , {id: post.codigoFilaAtendimento}) }}"><i class="material-icons">&#xE254;</i></a>
+                    <a class="delete" title="Delete" data-toggle="tooltip" href="{{ path('filad', {id: post.codigoFilaAtendimento}) }}"><i class="material-icons">&#xE872;</i></a>
                 </td>
 
             </tr>

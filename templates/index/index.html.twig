@@ -2,6 +2,14 @@
 
 {% block main %}
 
-    <h1>Conteudo</h1>
+    <div class="col-sm-4">
+
+        <a href="{{ path('filac') }}" class="btn btn-secondary">Fila de Atendimento</a>
+
+
+    </div>
+    <div class="col-sm-4">
+        <a href="{{ path('faixac') }}" class="btn btn-secondary">Fila de Atendimento Faixa Etaria</a>
+    </div>
 
 {% endblock %}

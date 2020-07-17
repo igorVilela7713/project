@@ -56,7 +56,7 @@ class FormController extends AbstractController{
 
         // just setup a fresh $task object (remove the example data)
         $task = new TfdFilaAtendimento();
-        $task->setNOME('Keyboard');
+        $task->setNOME('Nova Fila');
         $task->setCODIGOULTIMOUSUARIO("0");
         $task->setATIVO("1");
 
